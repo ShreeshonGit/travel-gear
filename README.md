@@ -1,36 +1,97 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# TravelGear | Premium Wholesaler Landing Page
 
-## Getting Started
+TravelGear is a modern, high-performance landing page designed for a premium travel suitcase and supplies wholesaler. Built with Next.js 16 and Tailwind CSS 4, it provides a professional B2B platform for showcasing products and generating wholesale leads.
 
-First, run the development server:
+## 🚀 Features
+
+- **Premium UI/UX:** A clean, modern design focused on brand trust and professional presentation.
+- **Dynamic Product Grid:** Showcases a curated selection of travel gear with wholesale-specific messaging.
+- **Smooth Animations:** Integrated with Framer Motion for subtle, engaging entrance and hover animations.
+- **Lead Generation:**
+  - **Wholesale Enquiry Form:** Built with React Hook Form and ready for Web3Forms integration.
+  - **WhatsApp Integration:** Floating contact button for instant B2B communication.
+- **Responsive Design:** Fully optimized for mobile, tablet, and desktop viewing.
+- **Performance Optimized:** Leveraging Next.js 16 features like optimized fonts and image loading.
+
+## 🛠️ Tech Stack
+
+- **Framework:** [Next.js 16](https://nextjs.org/) (App Router)
+- **Library:** [React 19](https://react.dev/)
+- **Styling:** [Tailwind CSS 4](https://tailwindcss.com/)
+- **Animations:** [Framer Motion](https://www.framer.com/motion/)
+- **Icons:** [Lucide React](https://lucide.dev/)
+- **Forms:** [React Hook Form](https://react-hook-form.com/)
+- **Type Safety:** [TypeScript](https://www.typescriptlang.org/)
+
+## 📂 Project Structure
+
+```text
+src/
+├── app/              # Next.js App Router pages and layouts
+│   ├── globals.css   # Global styles and Tailwind imports
+│   ├── layout.tsx    # Root layout with Navbar, Footer, and WhatsApp button
+│   └── page.tsx      # Main landing page assembling all sections
+├── components/       # Reusable UI components
+│   ├── About.tsx     # Company information section
+│   ├── Contact.tsx   # Enquiry form and contact details
+│   ├── Footer.tsx    # Site footer
+│   ├── Hero.tsx      # Landing hero section
+│   ├── Navbar.tsx    # Responsive navigation
+│   ├── ProductGrid.tsx # Product showcase
+│   └── WhatsAppButton.tsx # Floating contact widget
+└── public/           # Static assets (images, SVGs)
+```
+
+## 🏁 Getting Started
+
+### Prerequisites
+
+- Node.js 20+
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+   cd travelgear
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+### Development
+
+Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Build the project for production:
 
-## Learn More
+```bash
+npm run build
+```
 
-To learn more about Next.js, take a look at the following resources:
+Start the production server:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm start
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## ⚙️ Configuration
 
-## Deploy on Vercel
+### Contact Form (Web3Forms)
+The contact form in `src/components/Contact.tsx` is set up to work with [Web3Forms](https://web3forms.com/). To enable it:
+1. Get a free Access Key from Web3Forms.
+2. Replace `'YOUR_ACCESS_KEY_HERE'` in `src/components/Contact.tsx` with your actual key.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### WhatsApp Number
+Update the `phoneNumber` constant in `src/components/WhatsAppButton.tsx` to your business number.
